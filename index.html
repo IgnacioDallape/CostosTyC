@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
- 
+
 :root{
   --bg:#F5F4F0;
   --bg2:#FFFFFF;
@@ -33,7 +33,7 @@
   --r-sm:8px;
   --r-lg:16px;
 }
- 
+
 html{scroll-behavior:smooth}
 body{
   font-family:'Syne',sans-serif;
@@ -43,20 +43,20 @@ body{
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
 }
- 
+
 body::before{
   content:'';
   position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   pointer-events:none;z-index:0;opacity:.5;
 }
- 
+
 .orb{position:fixed;border-radius:50%;filter:blur(130px);pointer-events:none;z-index:0;}
 .orb-1{width:600px;height:600px;background:#C8A96E;top:-250px;right:-150px;opacity:.06;}
 .orb-2{width:500px;height:500px;background:#3ECFA0;bottom:-200px;left:-150px;opacity:.05;}
- 
+
 .page{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:3rem 1.5rem 6rem;}
- 
+
 /* HEADER */
 .header{
   display:flex;align-items:center;justify-content:space-between;
@@ -80,14 +80,14 @@ body::before{
 .badge.live{border-color:var(--accent-dim2);color:var(--accent);display:flex;align-items:center;gap:6px;}
 .live-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
- 
+
 /* LAYOUT */
 .main-grid{display:grid;grid-template-columns:1fr 370px;gap:24px;align-items:start;}
 @media(max-width:780px){
   .main-grid{grid-template-columns:1fr;}
   .header{flex-direction:column;align-items:flex-start;gap:14px;}
 }
- 
+
 /* SECTION HEAD */
 .section-head{display:flex;align-items:center;gap:12px;margin:20px 0 12px;}
 .section-head:first-child{margin-top:0;}
@@ -98,7 +98,7 @@ body::before{
 .section-icon svg{width:15px;height:15px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .section-title{font-size:13px;font-weight:600;color:var(--text);}
 .section-desc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.05em;margin-top:1px;}
- 
+
 /* CARD */
 .card{
   background:var(--bg2);border:1px solid var(--border);
@@ -107,7 +107,7 @@ body::before{
 }
 .card:hover{border-color:var(--border2);}
 .card-inner{padding:20px;}
- 
+
 /* FIELDS */
 .field{margin-bottom:16px;}
 .field:last-child{margin-bottom:0;}
@@ -137,14 +137,14 @@ body::before{
 }
 .input-wrap input::-webkit-inner-spin-button,
 .input-wrap input::-webkit-outer-spin-button{-webkit-appearance:none;}
- 
+
 .rule{height:1px;background:var(--border);margin:18px 0;}
 .sep{
   font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;
   color:var(--muted);display:flex;align-items:center;gap:12px;margin:24px 0 6px;
 }
 .sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--border);}
- 
+
 .btn{
   width:100%;padding:13px;
   background:var(--accent);color:#0B0C0E;
@@ -156,10 +156,10 @@ body::before{
 .btn:hover{background:var(--accent2);box-shadow:0 4px 24px var(--accent-dim2);}
 .btn:active{transform:scale(.98);}
 .btn svg{width:14px;height:14px;stroke:#0B0C0E;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
- 
+
 /* RESULTS */
 .results{display:flex;flex-direction:column;gap:12px;}
- 
+
 .hero-card{
   background:var(--bg2);border:1px solid var(--border2);
   border-radius:var(--r-lg);padding:24px;
@@ -186,7 +186,7 @@ body::before{
 }
 .hero-cur{font-size:22px;font-weight:400;color:var(--muted2);margin-right:6px;}
 .hero-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:10px;line-height:1.6;}
- 
+
 /* METRIC GRID */
 .metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .m-card{
@@ -197,7 +197,7 @@ body::before{
 .m-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .m-value{font-size:19px;font-weight:600;letter-spacing:-0.02em;color:var(--text);font-variant-numeric:tabular-nums;}
 .m-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);margin-top:4px;}
- 
+
 /* BREAKDOWN */
 .breakdown{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
 .breakdown-head{
@@ -214,7 +214,7 @@ body::before{
 .b-bar-fill{height:100%;border-radius:2px;transition:width .5s cubic-bezier(.4,0,.2,1);}
 .b-pct{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);width:26px;text-align:right;}
 .b-amt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text);min-width:88px;text-align:right;}
- 
+
 /* DIRECT COSTS */
 .direct-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .d-card{border-radius:var(--r);padding:16px 18px;border:1px solid;}
@@ -229,7 +229,7 @@ body::before{
 .d-sub{font-family:'JetBrains Mono',monospace;font-size:9px;margin-top:4px;}
 .d-card.chofer .d-sub{color:#0A8F6370;}
 .d-card.combustible .d-sub{color:#C47D0A70;}
- 
+
 /* TOTAL KM */
 .total-card{
   background:var(--bg2);border:1px solid var(--border2);
@@ -257,7 +257,7 @@ body::before{
 }
 .t-pip{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
 .t-row-val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);}
- 
+
 /* FOOTER */
 .footer{
   margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);
@@ -265,7 +265,7 @@ body::before{
 }
 .footer-l{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
 .footer-r{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);}
- 
+
 /* ANIMATIONS */
 .fade-in{animation:fadeUp .45s cubic-bezier(.4,0,.2,1) both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -276,9 +276,9 @@ body::before{
 <body>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
- 
+
 <div class="page">
- 
+
   <header class="header fade-in">
     <div class="logo">
       <div class="logo-icon">
@@ -294,12 +294,12 @@ body::before{
       <span class="badge live"><span class="live-dot"></span>En vivo</span>
     </div>
   </header>
- 
+
   <div class="main-grid">
- 
+
     <!-- ══ INPUTS ══ -->
     <div>
- 
+
       <!-- KM BASE -->
       <div class="section-head fade-in">
         <div class="section-icon" style="background:var(--blue-dim);border:1px solid #5B9CF630;">
@@ -321,7 +321,7 @@ body::before{
           </div>
         </div>
       </div>
- 
+
       <!-- COSTOS FIJOS -->
       <div class="section-head fade-in d1">
         <div class="section-icon" style="background:var(--blue-dim);border:1px solid #5B9CF630;">
@@ -351,7 +351,7 @@ body::before{
           </div>
         </div>
       </div>
- 
+
       <!-- MANTENIMIENTO -->
       <div class="section-head fade-in d2">
         <div class="section-icon" style="background:var(--accent-dim);border:1px solid var(--accent-dim2);">
@@ -389,14 +389,14 @@ body::before{
           </div>
         </div>
       </div>
- 
+
       <button class="btn fade-in d2" onclick="calcular()">
         <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Actualizar cálculo
       </button>
- 
+
       <div class="sep">Costos directos por km</div>
- 
+
       <!-- CHOFER -->
       <div class="section-head fade-in d3">
         <div class="section-icon" style="background:var(--green-dim);border:1px solid #3ECFA030;">
@@ -419,7 +419,7 @@ body::before{
           </div>
         </div>
       </div>
- 
+
       <!-- COMBUSTIBLE -->
       <div class="section-head fade-in d4">
         <div class="section-icon" style="background:var(--amber-dim);border:1px solid #F5A62330;">
@@ -450,18 +450,18 @@ body::before{
           </div>
         </div>
       </div>
- 
+
     </div>
- 
+
     <!-- ══ DASHBOARD ══ -->
     <div class="results">
- 
+
       <div class="hero-card fade-in">
         <div class="hero-tag">Costos indirectos — mensual</div>
         <div class="hero-value"><span class="hero-cur">$</span><span id="r-mensual">0</span></div>
         <div class="hero-sub" id="r-mensual-sub">ingresá los valores para calcular</div>
       </div>
- 
+
       <div class="metrics-grid fade-in d1">
         <div class="m-card">
           <div class="m-tag">Total anual</div>
@@ -474,7 +474,7 @@ body::before{
           <div class="m-sub" id="r-km-sub">costo fijo por km</div>
         </div>
       </div>
- 
+
       <div class="breakdown fade-in d2">
         <div class="breakdown-head">
           <span>Distribución</span>
@@ -482,7 +482,7 @@ body::before{
         </div>
         <div class="breakdown-body" id="breakdown-list"></div>
       </div>
- 
+
       <div class="direct-grid fade-in d3">
         <div class="d-card chofer">
           <div class="d-tag">Chofer / km</div>
@@ -495,17 +495,17 @@ body::before{
           <div class="d-sub" id="r-combustible-sub">precio ÷ rendimiento</div>
         </div>
       </div>
- 
+
       <div class="total-card fade-in d4">
         <div class="total-glow"></div>
         <div class="total-tag">Costo total por kilómetro recorrido</div>
         <div class="total-value"><span class="total-cur">$</span><span id="r-total-km">—</span></div>
         <div class="total-rows" id="r-total-rows"></div>
       </div>
- 
+
     </div>
   </div>
- 
+
   <!-- SIMULADOR DE VIAJE -->
   <div class="trip-section fade-in">
     <div class="trip-header">
@@ -553,6 +553,14 @@ body::before{
             <span class="input-affix suf">litros</span>
           </div>
         </div>
+        <div class="rule"></div>
+        <div class="field">
+          <div class="field-label">Pago al chofer <span class="field-hint">monto real por este viaje</span></div>
+          <div class="input-wrap">
+            <span class="input-affix">$</span>
+            <input type="number" id="v-chofer" value="0" min="0" step="1000" oninput="calcularViaje()" placeholder="0">
+          </div>
+        </div>
       </div>
       <div class="trip-result" id="trip-result-a">
         <div class="trip-empty">
@@ -563,14 +571,65 @@ body::before{
       <div class="trip-result" id="trip-result-b">
       </div>
     </div>
- 
+  </div>
+
+  <!-- ALERTA EXCESO COMBUSTIBLE -->
+  <div class="fuel-alert-section" id="fuel-alert-section" style="display:none;">
+    <div class="fa-header">
+      <div class="fa-header-left">
+        <div class="fa-icon">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="fa-title">Alerta — Exceso de combustible</div>
+          <div class="fa-desc">el consumo real superó el esperado en este viaje</div>
+        </div>
+      </div>
+      <div class="fa-badge" id="fa-badge">consumo elevado</div>
+    </div>
+    <div class="fa-grid">
+      <div class="fa-card">
+        <div class="fa-card-icon" style="background:#2563EB12;border-color:#2563EB25;">
+          <svg viewBox="0 0 24 24" style="stroke:#2563EB;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="fa-card-label">Kilómetros recorridos</div>
+        <div class="fa-card-value" id="fa-km">—</div>
+        <div class="fa-card-sub">en este viaje</div>
+      </div>
+      <div class="fa-card">
+        <div class="fa-card-icon" style="background:#C47D0A12;border-color:#C47D0A25;">
+          <svg viewBox="0 0 24 24" style="stroke:#C47D0A;"><path d="M3 22V8l9-6 9 6v14H3z"/><path d="M10 22V12h4v10"/></svg>
+        </div>
+        <div class="fa-card-label">Litros cargados</div>
+        <div class="fa-card-value" id="fa-litros">—</div>
+        <div class="fa-card-sub" id="fa-litros-sub">en este viaje</div>
+      </div>
+      <div class="fa-card">
+        <div class="fa-card-icon" style="background:#DC262612;border-color:#DC262625;">
+          <svg viewBox="0 0 24 24" style="stroke:#DC2626;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="fa-card-label">Consumo real</div>
+        <div class="fa-card-value fa-red" id="fa-consumo">—</div>
+        <div class="fa-card-sub" id="fa-consumo-sub">— esperado</div>
+      </div>
+      <div class="fa-card fa-card-highlight">
+        <div class="fa-card-icon" style="background:#DC262618;border-color:#DC262635;">
+          <svg viewBox="0 0 24 24" style="stroke:#DC2626;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="fa-card-label">Costo extra total</div>
+        <div class="fa-card-value fa-red" id="fa-costo-extra">—</div>
+        <div class="fa-card-sub" id="fa-costo-extra-sub">litros extra × precio</div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer fade-in">
     <div class="footer-l">FleetCost · Calculadora de costos de transporte</div>
     <div class="footer-r" id="footer-date"></div>
   </footer>
- 
+
 </div>
- 
+
 <style>
 .trip-section{margin-top:2.5rem;border:1px solid var(--border2);border-radius:var(--r-lg);overflow:hidden;background:var(--bg2);}
 .trip-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);background:var(--bg3);}
@@ -594,28 +653,28 @@ body::before{
 .gh-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;}
 .gh-card.pos .gh-tag{color:var(--green);}
 .gh-card.neg .gh-tag{color:#FF6B6B;}
-.gh-value{font-size:30px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1;}
+.gh-value{font-size:28px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1;word-break:break-all;}@media(max-width:400px){.gh-value{font-size:22px;}}
 .gh-card.pos .gh-value{color:var(--green);}
 .gh-card.neg .gh-value{color:#FF6B6B;}
 .gh-sub{font-family:'JetBrains Mono',monospace;font-size:9px;margin-top:6px;}
 .gh-card.pos .gh-sub{color:#0A8F6388;}
 .gh-card.neg .gh-sub{color:#FF6B6B88;}
-.trip-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.tm-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 14px;}
-.tm-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
-.tm-val{font-size:15px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums;}
+.trip-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;}@media(max-width:500px){.trip-metrics{grid-template-columns:1fr;}}
+.tm-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 14px;min-width:0;}
+.tm-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;word-break:break-word;line-height:1.4;}
+.tm-val{font-size:15px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums;word-break:break-all;}
   .tm-val.ok{color:var(--green);}
 .tm-val.alto{color:#DC2626;}
 .tm-val.warn{color:var(--amber);}
 .tm-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);margin-top:3px;}
 .trip-desglose{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-sm);overflow:hidden;}
 .td-head{padding:9px 14px;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;}
-.td-row{display:flex;justify-content:space-between;align-items:center;padding:7px 14px;transition:background .1s;}
+.td-row{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 14px;transition:background .1s;gap:8px;}
 .td-row:hover{background:var(--bg4);}
-.td-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);display:flex;align-items:center;gap:7px;}
+.td-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);display:flex;align-items:flex-start;gap:7px;word-break:break-word;line-height:1.4;}
 .td-pip{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
-.td-val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text);}
-.td-total{border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;padding:9px 14px;}
+.td-val{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text);white-space:nowrap;flex-shrink:0;}
+.td-total{border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;padding:9px 14px;gap:8px;}
 .td-total-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);font-weight:500;}
 .td-total-val{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text);font-weight:500;}
 .cons-badge{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 9px;border-radius:20px;}
@@ -637,21 +696,85 @@ body::before{
 .rent-bar-fill.alta{background:#0A8F63;}
 .rent-bar-fill.media{background:#C47D0A;}
 .rent-bar-fill.baja{background:#DC2626;}
-.rent-bottom{display:flex;align-items:baseline;gap:10px;}
+.rent-bottom{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
 .rent-pct{font-size:22px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;}
 .rent-pct.alta{color:#0A8F63;}
 .rent-pct.media{color:#C47D0A;}
 .rent-pct.baja{color:#DC2626;}
 .rent-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);line-height:1.5;}
+/* ── FUEL ALERT DASHBOARD ── */
+.fuel-alert-section{
+  margin-top:1.5rem;
+  border:1px solid #DC262625;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  background:#DC26260A;
+  animation:slideDown .4s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.fa-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 24px;
+  border-bottom:1px solid #DC262620;
+  background:#DC262608;
+  position:relative;
+}
+.fa-header::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,#DC2626,transparent);
+}
+.fa-header-left{display:flex;align-items:center;gap:14px;}
+.fa-icon{
+  width:36px;height:36px;border-radius:9px;
+  background:#DC262615;border:1px solid #DC262630;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.fa-icon svg{width:16px;height:16px;stroke:#DC2626;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.fa-title{font-size:14px;font-weight:600;color:#DC2626;}
+.fa-desc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.05em;margin-top:1px;}
+.fa-badge{
+  font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;
+  background:#DC262615;border:1px solid #DC262630;color:#DC2626;
+  white-space:nowrap;
+}
+.fa-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+@media(max-width:700px){.fa-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:400px){.fa-grid{grid-template-columns:1fr;}}
+.fa-card{
+  padding:24px 22px;
+  border-right:1px solid #DC262615;
+  display:flex;flex-direction:column;gap:10px;
+}
+.fa-card:last-child{border-right:none;}
+@media(max-width:700px){
+  .fa-card:nth-child(2){border-right:none;}
+  .fa-card:nth-child(3){border-top:1px solid #DC262615;}
+  .fa-card:nth-child(4){border-top:1px solid #DC262615;border-right:none;}
+}
+.fa-card-highlight{background:#DC26260D;}
+.fa-card-icon{
+  width:32px;height:32px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid;flex-shrink:0;
+}
+.fa-card-icon svg{width:14px;height:14px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.fa-card-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.fa-card-value{font-size:24px;font-weight:700;letter-spacing:-.03em;color:var(--text);font-variant-numeric:tabular-nums;line-height:1;}
+.fa-card-value.fa-red{color:#DC2626;}
+.fa-card-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);}
 </style>
- 
+
 <script>
 const COLORS=['#5B9CF6','#C8A96E','#3ECFA0','#F5A623','#FF6B6B'];
 function fmtN(n){ return Math.round(n).toLocaleString('es-AR'); }
 function fmtM(n){ return '$ '+fmtN(n); }
- 
+
 let _totalKmG=0;
- 
+
 function calcular(){
   const km=parseFloat(document.getElementById('km').value)||0;
   const rubros=[
@@ -665,7 +788,7 @@ function calcular(){
   const anual=total*12;
   const indKm=km>0?total/km:null;
   const max=Math.max(...rubros.map(r=>r.val),1);
- 
+
   document.getElementById('r-mensual').textContent=fmtN(total);
   document.getElementById('r-mensual-sub').textContent=
     total>0?`${rubros.filter(r=>r.val>0).length} rubros activos · anual ${fmtM(anual)}`
@@ -678,7 +801,7 @@ function calcular(){
     document.getElementById('r-km').textContent='—';
     document.getElementById('r-km-sub').textContent='ingresá los km';
   }
- 
+
   document.getElementById('r-total-rubros').textContent=fmtM(total);
   document.getElementById('breakdown-list').innerHTML=rubros.map((r,i)=>{
     const pct=total>0?Math.round(r.val/total*100):0;
@@ -691,17 +814,17 @@ function calcular(){
       <div class="b-amt">${fmtM(r.val)}</div>
     </div>`;
   }).join('');
- 
+
   const choferKm=parseFloat(document.getElementById('chofer-km').value)||0;
   const precioL=parseFloat(document.getElementById('precio-litro').value)||0;
   const rend=parseFloat(document.getElementById('rendimiento').value)||0;
   const combustKm=rend>0?precioL/rend:0;
- 
+
   document.getElementById('r-chofer').textContent=choferKm>0?fmtM(choferKm):'—';
   document.getElementById('r-chofer-sub').textContent=choferKm>0?'por km recorrido':'ingresá la tarifa';
   document.getElementById('r-combustible').textContent=combustKm>0?fmtM(combustKm):'—';
   document.getElementById('r-combustible-sub').textContent=combustKm>0?rend.toFixed(1)+' km / litro':'ingresá precio y rendimiento';
- 
+
   const totalKm=(indKm||0)+choferKm+combustKm;
   _totalKmG=totalKm;
   if(km>0&&totalKm>0){
@@ -721,19 +844,20 @@ function calcular(){
   }
   calcularViaje();
 }
- 
+
 function calcularViaje(){
   const facturado = parseFloat(document.getElementById('v-facturado').value)||0;
   const vkm       = parseFloat(document.getElementById('v-km').value)||0;
   const peajes    = parseFloat(document.getElementById('v-peajes').value)||0;
   const litros    = parseFloat(document.getElementById('v-litros').value)||0;
+  const pagoChofer= parseFloat(document.getElementById('v-chofer').value)||0;
   const precioL   = parseFloat(document.getElementById('precio-litro').value)||0;
   const rendTeo   = parseFloat(document.getElementById('rendimiento').value)||0;
- 
+
   const elA = document.getElementById('trip-result-a');
   const elB = document.getElementById('trip-result-b');
- 
-  if(facturado===0 && vkm===0 && peajes===0 && litros===0){
+
+  if(facturado===0 && vkm===0 && peajes===0 && litros===0 && pagoChofer===0){
     elA.innerHTML=`<div class="trip-empty">
       <svg viewBox="0 0 24 24" style="width:26px;height:26px;stroke:var(--muted);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
       <div>completá los datos<br>del viaje</div>
@@ -741,26 +865,28 @@ function calcularViaje(){
     elB.innerHTML='';
     return;
   }
- 
-  // Si hay litros reales, reemplaza el componente de combustible del costo/km
-  const combustKmTeo = rendTeo > 0 ? precioL / rendTeo : 0;
-  const costoKmSinCombust = _totalKmG - combustKmTeo;
-  const costoLitros = litros > 0 ? litros * precioL : null;
-  // Costo de combustible real para este viaje
-  const combustViaje = (litros > 0) ? litros * precioL : combustKmTeo * vkm;
-  // Costo total: (costo/km sin combustible × km) + combustible real + peajes
-  const costoViaje = costoKmSinCombust * vkm + combustViaje + peajes;
+
+  // Separar componentes del costo/km teórico
+  const combustKmTeo  = rendTeo > 0 ? precioL / rendTeo : 0;
+  const choferKmTeo   = parseFloat(document.getElementById('chofer-km').value)||0;
+  const costoKmBase   = _totalKmG - combustKmTeo - choferKmTeo;
+  const costoLitros   = litros > 0 ? litros * precioL : null;
+  // Si hay valores reales, reemplazar teórico; si no, usar teórico
+  const combustViaje  = litros > 0      ? litros * precioL         : combustKmTeo * vkm;
+  const choferViaje   = pagoChofer > 0  ? pagoChofer               : choferKmTeo  * vkm;
+  // Costo total: base × km + combustible real/teo + chofer real/teo + peajes
+  const costoViaje = costoKmBase * vkm + combustViaje + choferViaje + peajes;
   const costoKm    = vkm > 0 ? costoViaje / vkm : _totalKmG;
   const ganancia   = facturado - costoViaje;
   const margen     = facturado > 0 ? ganancia/facturado*100 : 0;
   const isPos      = ganancia >= 0;
- 
+
   // Consumo cada 100 km
   const consumoReal = (litros > 0 && vkm > 0) ? (litros / vkm * 100) : null;
   const consumoTeo  = rendTeo > 0 ? (100 / rendTeo) : null;
   const diff        = (consumoReal !== null && consumoTeo !== null) ? consumoReal - consumoTeo : null;
   const isAlto      = diff !== null && diff > consumoTeo * 0.1;
- 
+
   elA.innerHTML=`
     <div class="gh-card ${isPos?'pos':'neg'}">
       <div class="gh-tag">${isPos?'ganancia neta':'pérdida neta'}</div>
@@ -793,14 +919,18 @@ function calcularViaje(){
       </div>
     </div>
   `;
- 
+
   elB.innerHTML=`
     <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Desglose de costos del viaje</div>
     <div class="trip-desglose">
       <div class="td-head"><span>Concepto</span><span>Monto</span></div>
       <div class="td-row">
-        <span class="td-label"><span class="td-pip" style="background:#5B9CF6;"></span>Costo operativo (sin combustible)</span>
-        <span class="td-val">${fmtM(costoKmSinCombust*vkm)}</span>
+        <span class="td-label"><span class="td-pip" style="background:#5B9CF6;"></span>Costos indirectos (km)</span>
+        <span class="td-val">${fmtM(costoKmBase*vkm)}</span>
+      </div>
+      <div class="td-row">
+        <span class="td-label"><span class="td-pip" style="background:#3ECFA0;"></span>Chofer${pagoChofer>0?' (real)':' (teórico)'}</span>
+        <span class="td-val">${fmtM(choferViaje)}</span>
       </div>
       <div class="td-row">
         <span class="td-label"><span class="td-pip" style="background:#F5A623;"></span>Combustible${litros>0?' (real: '+litros+' L)':' (teórico)'}</span>
@@ -817,7 +947,7 @@ function calcularViaje(){
     </div>
     <div style="margin-top:12px;padding:12px 14px;border-radius:var(--r-sm);background:${isPos?'#3ECFA010':'#FF6B6B10'};border:1px solid ${isPos?'#3ECFA025':'#FF6B6B25'};">
       <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:${isPos?'var(--green)':'#FF6B6B'};letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">resultado</div>
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);">${fmtM(facturado)} facturado − ${fmtM(costoViaje)} costos</span>
         <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:${isPos?'var(--green)':'#FF6B6B'};">${isPos?'':'−'}${fmtM(Math.abs(ganancia))}</span>
       </div>
@@ -855,6 +985,23 @@ function calcularViaje(){
       </div>
     </div>` : ''}
   `;
+
+  // Fuel alert dashboard
+  const alertSection = document.getElementById('fuel-alert-section');
+  if(isAlto && diff !== null && vkm > 0 && litros > 0){
+    const litrosExtra = (diff/100)*vkm;
+    const costoExtra  = litrosExtra * precioL;
+    alertSection.style.display = 'block';
+    document.getElementById('fa-km').textContent         = vkm.toLocaleString('es-AR') + ' km';
+    document.getElementById('fa-litros').textContent     = litros.toLocaleString('es-AR') + ' L';
+    document.getElementById('fa-litros-sub').textContent = (litros - (consumoTeo/100*vkm)).toFixed(1) + ' L más de lo esperado';
+    document.getElementById('fa-consumo').textContent    = consumoReal.toFixed(1) + ' L';
+    document.getElementById('fa-consumo-sub').textContent= consumoTeo ? consumoTeo.toFixed(1) + ' L esperado' : '— esperado';
+    document.getElementById('fa-costo-extra').textContent= fmtM(costoExtra);
+    document.getElementById('fa-costo-extra-sub').textContent = litrosExtra.toFixed(1) + ' L × ' + fmtM(precioL);
+  } else {
+    alertSection.style.display = 'none';
+  }
 }
 </script>
 </body>
